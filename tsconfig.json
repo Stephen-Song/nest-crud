@@ -3,6 +3,7 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "declaration": true,
+    "moduleResolution": "node",
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -11,6 +12,10 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "plugins": [{"transform": "ts-import-plugin"}],
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
